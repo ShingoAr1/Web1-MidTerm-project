@@ -84,26 +84,30 @@
           <li><a href="Help.html">HELP</a></li>
         </ul>     
        </nav>
-       <div class="sp-nav">
-        <div id="sp-menu">
-          <a href="products.html">Products</a>
-          <a href="AboutUs.html">About us</a>
-          <a href="Help.html">HELP</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-         <i class="fa fa-bars"></i>
-        </a>
-        <script>
-          function myFunction() {
-          var x = document.getElementById("sp-menu");
-          if (x.style.display === "block") {
-            x.style.display = "none";
-          } else {
-            x.style.display = "block";
-          }
-        }
+       <div class="header-logo-menu">
+         <div id="sp-nav">
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <nav id="nav-content">
+              <ul class="sp-menu">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="Help.html">HELP</a></li>
+              </ul>
+            </nav>
+              <script>
+                $(function() {
+                  $('#nav-content li a').on('click', function(event) {
+                    $('#nav-input').prop('checked', false);
+                   });
+                 });
+              </script>
 
-        </script>
+         </div>
+        </div>
+       
+    
        </div>
          
     </div>
