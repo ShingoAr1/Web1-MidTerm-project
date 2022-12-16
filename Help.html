@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>HELP | Liquor Kingdom</title>
+    <style>
+  
+      .main-container{
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.864);
+        color: black;
+        padding: 10px;
+      }
+      .main-container h1{
+        text-align: center;
+      }
+      input{
+        margin: 10px;
+      }
+     
+
+    </style>
+ 
+    
+</head>
+<body>
+  <header>
+    <div class="hd-container">
+       <a href="homepage.html" class="logo"><img src="images\logo.png" alt="Liquor Kingdom"></a>
+       <nav id="navwrap">
+        <ul class="hd-menu">
+          <li><a href="products.html">Products</a></li>
+          <li><a href="AboutUs.html">About us</a></li>
+          <li><a href="Help.html">HELP</a></li>
+        </ul>     
+       </nav>
+       <div class="sp-nav">
+        <div id="sp-menu">
+          <a href="products.html">Products</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="Help.html">HELP</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+        </a>
+        <script>
+          function myFunction() {
+          var x = document.getElementById("sp-menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+
+        </script>
+       </div>
+         
+    </div>
+  </header>
+    <main>
+      <div class="main-container">
+        <h1>HELP</h1>
+       <p>Maybe one of FAQs can help you. <a href="faq.html">Go to FAQ</a></p>
+        <form action="#" method="post">
+          <fieldset>
+            <label for="Name">Name*</label>
+                     <input type="text" name="Name" id="Name" placeholder="Your Name" required><br>
+          <label for="email">Email*</label>
+            <input type="email" name="email" id="email" placeholder="Email" required><br>
+          <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number(Optional)"> <br>
+          <label>Reason for contacting</label><br>
+            <input type="radio" name="reason-type" id="Complaint"><label for="Complaint">Complaint</label><br>
+            <input type="radio" name="reason-type" id="Cancel"><label for="Cancel">Order Cancellation</label><br>
+            <input type="radio" name="reason-type" id="Question"><label for="Question">Question</label><br>
+            <input type="radio" name="reason-type" id="Suggestion"><label for="Suggestion">Suggestion</label><br>
+            <input type="radio" name="reason-type" id="Other"><label for="Other">Other</label><br>
+          <label for="Message">Message</label><br>
+           <textarea name="message" id="Message" cols="30" rows="10"></textarea><br>
+          <input type="submit" value="Submit">
+          <p>* Must be filled out</p>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+   
+    <footer>
+      <ul class="footer-lists">
+        <li><a href="Help.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Liquor Kingdom</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .faq-container h1{
+        text-align: center;
+        padding: 20px;
+      }
+      .question{
+        background-color: #dec69f;
+        color:black ;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        text-align: left;
+        border: 1px solid rgba(0, 0, 0, 0.577);
+        transition: 0.8s;
+        font-family: inherit;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .active, .question:hover{
+        background-color: #ea8d1b;
+      }
+      .answer{
+        padding: 0 20px;
+        background-color: white;
+        color: #0C0507;
+        display: none;
+        overflow: hidden;
+        font-family: inherit;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="hd-container">
+       <a href="homepage.html" class="logo"><img src="images\logo.png" alt="Liquor Kingdom"></a>
+       <nav id="navwrap">
+        <ul class="hd-menu">
+          <li><a href="products.html">Products</a></li>
+          <li><a href="AboutUs.html">About us</a></li>
+          <li><a href="Help.html">HELP</a></li>
+        </ul>     
+       </nav>
+       <div class="sp-nav">
+        <div id="sp-menu">
+          <a href="products.html">Products</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="Help.html">HELP</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+        </a>
+        <script>
+          function myFunction() {
+          var x = document.getElementById("sp-menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+
+        </script>
+       </div>
+         
+    </div>
+  </header>
+    <main>
+      <div class="faq-container">
+        <h1>FAQ</h1>
+        <button class="question">How Can I cancel my order?</button>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempore aliquam voluptatum laudantium. Excepturi ab, sed consectetur architecto fugiat autem, nisi officia ea facilis corporis qui aliquam, nam delectus illo.</p>
+        </div>
+        <button class="question">Different product is delivered from my order.</button>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio provident nobis dolorum architecto quo a debitis perspiciatis, odio sequi. Quos odit hic, nihil ea commodi deserunt vel aliquam ullam?</p>
+        </div>
+        <button class="question">Can I deliver to other person as a gift?</button>
+        <div class="answer">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum quis veritatis et cumque, iure reprehenderit pariatur, provident aliquam velit, necessitatibus accusantium qui itaque natus eius rem nostrum laborum temporibus. Dolorum!</p>
+        </div>
+        <button class="question">Can you deliver to North Korea?</button>
+        <div class="answer">
+          <p>Sorry, currently we can't deliver to the country. I hope you <span>escape from North Korea</span> and shop with our store</p>
+        </div>
+        <script>
+          var acc = document.getElementsByClassName("question");
+          var i;
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", 
+            function () {
+              this.classList.toggle("active");
+              var answer = this.nextElementSibling;
+              if (answer.style.display === "block") {
+                answer.style.display = "none";
+              }else{
+                answer.style.display = "block";
+              }
+              
+            });
+            
+          }
+
+        </script>
+
+      </div>
+    </main>
+    <footer>
+      <ul class="footer-lists">
+        <li><a href="Help.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    </footer>
+</body>
+</html>

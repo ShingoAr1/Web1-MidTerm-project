@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About us | Liquor Kingdom </title>
+    <style>
+      .container{
+        max-width: 1170px;
+        max-height: 800px;
+        background-color: #dec69f;
+        color: #0C0507;
+        padding: 10px 30px;
+        box-shadow: -3px 5px #0C0507, inset -2px 20px 10px #CB3A1D;
+        text-shadow: -0.5px 0.5px #0C0507;
+      }
+      .container h1{
+        text-align: center;
+        
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="hd-container">
+       <a href="homepage.html" class="logo"><img src="images\logo.png" alt="Liquor Kingdom"></a>
+       <nav id="navwrap">
+        <ul class="hd-menu">
+          <li><a href="products.html">Products</a></li>
+          <li><a href="AboutUs.html">About us</a></li>
+          <li><a href="Help.html">HELP</a></li>
+        </ul>     
+       </nav>
+       <div class="sp-nav">
+        <div id="sp-menu">
+          <a href="products.html">Products</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="Help.html">HELP</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+        </a>
+        <script>
+          function myFunction() {
+          var x = document.getElementById("sp-menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+
+        </script>
+       </div>
+         
+    </div>
+  </header>
+       <div class="container">
+        <h1>About Us</h1> 
+        <section>
+            <h2>History</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis exercitationem commodi error modi quidem. Vitae voluptatem quidem nam magni sunt facilis inventore, culpa ut dolor ducimus! Aut saepe quasi culpa. 19XX, Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nemo obcaecati fugit, reprehenderit dicta aut facere harum cum vel provident similique ipsam laboriosam non accusantium voluptas dolorum eaque? Odio, tempore.</p>
+        </section>
+        
+       </div>
+       <footer>
+        <ul class="footer-lists">
+          <li><a href="Help.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      </footer>
+</body>
+</html>

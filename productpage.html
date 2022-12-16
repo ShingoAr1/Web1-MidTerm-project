@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Liquor Kingdom</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    .slideshow-container, .product-detail{
+      background-color: white;
+      color: #0C0507;
+      border-radius: 5px;
+    }
+   
+  .order{
+    float: right;
+  }
+  .order input{
+    margin: 10px;
+  }
+  input[type=number]{
+    width: 30px;
+  }
+  input[type=button]{
+    height: 40px;
+    width:160px;
+    font-family: inherit;
+    font-size: large;
+    font-weight: bold;
+  }
+  input[type=button]:hover{
+    box-shadow: inset 5px 5px 15px #CB3A1Ddf, inset -5px -5px 15px #CB3A1Ddf;
+    transition: 0.1s;
+  }
+  .slideshow-container{
+    width: 400px;
+    height: 100%;
+    margin: 10px auto;
+    position: relative;
+  }
+  .slides {
+    display: none;
+    height: 100%;
+    width: 100%;
+  }
+  .slides-btn{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 125px;
+    background-color: rgba(0, 0, 0, 0.569);
+    font-weight: bold;
+    color: white;
+
+  }
+  .slides-btn:hover{
+    background-color: #0C0507;
+    transition: 0.1s;
+  }
+  .display-right{
+    right: 0px;
+  }
+  @media screen and (max-width:500px){
+    .slideshow-container{
+      width: 100%;
+    }
+
+  }
+
+
+
+    </style>
+</head>
+<body>
+  <header>
+    <div class="hd-container">
+       <a href="homepage.html" class="logo"><img src="images\logo.png" alt="Liquor Kingdom"></a>
+       <nav id="navwrap">
+        <ul class="hd-menu">
+          <li><a href="products.html">Products</a></li>
+          <li><a href="AboutUs.html">About us</a></li>
+          <li><a href="Help.html">HELP</a></li>
+        </ul>     
+       </nav>
+       <div class="sp-nav">
+        <div id="sp-menu">
+          <a href="products.html">Products</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="Help.html">HELP</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+        </a>
+        <script>
+          function myFunction() {
+          var x = document.getElementById("sp-menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+
+        </script>
+       </div>
+         
+    </div>
+  </header>
+    <div class="slideshow-container">
+     <img class="slides" src="images\drink_sparkling_nihonsyu.png" alt="nihonshu">
+     <img class="slides" src="images\nihonshu.jpg" alt="masuzake">
+
+     <button class="slides-btn display-left" onclick="plusDivs(-1)">&#10094</button>
+     <button class="slides-btn display-right" onclick="plusDivs(1)">&#10095</button>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for(i=0; i < x.length; i++){
+          x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+<div class="product-detail">
+    <div class="order">
+        <form action="checkout.html">
+         <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity"><br>
+            <a href="checkout.html"><input type="button" name="buy-btn" id="buy" value="Buy Now" ></a>
+           
+        </form>
+    </div>
+    <div class="description">
+        <h1>Product 1</h1>
+        <h2>$XX.XX</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis autem recusandae, ratione adipisci nam eaque, soluta cum deserunt voluptatem maiores magni nobis modi magnam ex accusantium praesentium porro, molestiae ea.</p>
+    </div>
+  </div>
+    <footer>
+      <ul class="footer-lists">
+        <li><a href="Help.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    
+    </footer>
+</div>
+</body>
+</html>

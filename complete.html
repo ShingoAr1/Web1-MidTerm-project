@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you for Shopping at Liquor Kingdom!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main{
+            text-align: center;
+            width: 100%;
+            border: 3px solid black;
+            padding: 30px auto;
+            margin: 20px auto;
+            background-color: #dec69f;
+            color: #0C0507;
+        }
+        main h2,h1,p {
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hd-container">
+           <a href="homepage.html" class="logo"><img src="images\logo.png" alt="Liquor Kingdom"></a>
+           <nav id="navwrap">
+            <ul class="hd-menu">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="AboutUs.html">About us</a></li>
+              <li><a href="Help.html">HELP</a></li>
+            </ul>     
+           </nav>
+           <div class="sp-nav">
+            <div id="sp-menu">
+              <a href="products.html">Products</a>
+              <a href="AboutUs.html">About us</a>
+              <a href="Help.html">HELP</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+             <i class="fa fa-bars"></i>
+            </a>
+            <script>
+              function myFunction() {
+              var x = document.getElementById("sp-menu");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+            }
+    
+            </script>
+           </div>
+             
+        </div>
+      </header>
+    <main>
+        <h2>Your Order is successfully completed!</h2>
+        <h1>Your Order ID : XXXX 0000 YYYY 222</h1>
+        <p>If you want to cancel an order, contact us via <a href="Help.html">HELP</a> page. </p>
+    </main>
+    <footer>
+        <ul class="footer-lists">
+          <li><a href="Help.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      </footer>
+</body>
+</html>

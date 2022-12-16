@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquor Kingdom</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <style>
+      .product-categories{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:20px;
+      }
+
+      .category{
+        width: 100%;
+        max-width:25%;
+height: 100%;
+position: relative;
+opacity: 0.6;
+margin: 0;
+
+}
+.category:hover{
+  opacity: 1;
+}
+.category img{
+  width:220px;
+  height:220px;
+}
+.category p{
+  position: absolute;
+  color: white;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(97, 92, 92, 0.221);
+}
+.category p span{
+  font-weight: bold;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.608);
+}
+.testimonial-wrapper{
+  height: 100%;
+  margin: 20px 0;
+}
+.testimonial-wrapper h2{
+  text-align: center;
+
+}
+.testimonials{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+.testimonial{
+  width: 250px;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid black;
+}
+.test-person{
+  font-size: smaller;
+  width: 75%;
+  border-top: 0.5px solid black;
+  margin: 10px auto;
+}
+.hero-slideshow{
+  width: 100%;
+  max-width: 1000px;
+  height: 620px;
+  position: relative;
+  margin: 0 auto;
+}
+@keyframes appear {
+  0%{font-size: 1px;}
+  50%{font-size: 30px;}
+  
+}
+.hero-slideshow h2{
+  position: absolute;
+  top: 10px;
+  font-family: inherit;
+  color: white;
+  font-size: 1px;
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+.slides{
+  width: 100%;
+  height: 100%;
+  }
+  @media screen and (max-width:500px){
+    .hero-slideshow{
+      height: 250px;
+    }
+    .product-categories{
+        display: flex;
+        flex-direction: column;
+        }
+    .category{
+      max-width: 100%;
+      margin: 2px auto;
+      text-align: center;
+    }
+    .testimonials{
+      display: flex;
+        flex-direction: column;
+    }
+    .testimonial{
+      margin: 2px auto;
+    }
+
+  }
+  
+
+    </style>
+</head>
+  <header>
+    <div class="hd-container">
+       <a href="homepage.html" class="logo"><img src="images\logo.png" alt="Liquor Kingdom"></a>
+       <nav id="navwrap">
+        <ul class="hd-menu">
+          <li><a href="products.html">Products</a></li>
+          <li><a href="AboutUs.html">About us</a></li>
+          <li><a href="Help.html">HELP</a></li>
+        </ul>     
+       </nav>
+       <div class="header-logo-menu">
+         <div id="sp-nav">
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+
+            <div id="nav-content">
+              <ul class="sp-menu">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="Help.html">HELP</a></li>
+              </ul>
+              <script>
+                $(function() {
+                  $('#nav-content li a').on('click', function(event) {
+                    $('#nav-input').prop('checked', false);
+                   });
+                 });
+              </script>
+              
+            </div>
+         </div>
+        </div>
+       
+    
+       </div>
+         
+    </div>
+  </header>
+  <div class="hero-slideshow">
+      <img class="slides" src="images\Beer-promo.jpeg" alt="">
+      <img class="slides" src="images\aWhisky.jpg" alt="">
+      <h2>Merry Drinkmas!!!!</h2>
+  </div>
+  <script>
+    var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+  </script>
+ 
+    <div class="categories-wrapper">
+         <div class="product-categories">
+            <div class="category">
+              <a href="products.html">
+                <img src="images\nihonshu.jpg" alt="nihonshu">
+                <p><span>Special Offer</span> Yokoso the world of Nihonshu</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="products.html">
+                <img src="images\aBeer.jpg" alt="beer">
+               <p>Explore beer in our store</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="products.html"> <img src="images\aWine.jpg" alt="wine">
+                <p>Explore wine in our store</p></a>           
+            </div>
+            <div class="category">
+              <a href="products.html"><img src="images\aWhisky.jpg" alt="whisky">
+                <p>Explore whisky in our store</p></a>
+            </div>
+        </div>
+      </div>
+      <div class="testimonial-wrapper">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolor nesciunt praesentium, fuga, ducimus reiciendis modi fugit quibusdam nam optio totam, molestiae soluta odit quod nemo distinctio nisi est maxime!</p>
+           <div class="test-person">
+            <p>Shingo, 22 years old, Tokyo</p>
+           </div>
+          </div>
+          <div class="testimonial">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolor nesciunt praesentium, fuga, ducimus reiciendis modi fugit quibusdam nam optio totam, molestiae soluta odit quod nemo distinctio nisi est maxime!</p>
+            <div class="test-person">
+             <p>Mateu, 51 years old, Valencia</p>
+            </div>
+           </div>
+           <div class="testimonial">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolor nesciunt praesentium, fuga, ducimus reiciendis modi fugit quibusdam nam optio totam, molestiae soluta odit quod nemo distinctio nisi est maxime!</p>
+            <div class="test-person">
+             <p>Erena, 30 years old, Zagreb</p>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+      <footer>
+        <ul class="footer-lists">
+          <li><a href="Help.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      </footer>
+      
+</body>
+</html>
